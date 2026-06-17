@@ -1,4 +1,6 @@
 import structures.trees.IntTree;
+import models.Person;
+import structures.trees.BinaryTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -37,7 +39,25 @@ public class App {
         System.out.println("\nIn-Order");
         arbolNumeros.inOrder();
         System.out.println("\nNiveles o Anchura: ");
-        System.out.println("\\nCalculo altura del Árbol: ");
-        
+        // arbolNumeros.nivelesIterativo();
+        System.out.println("\nCalculo altura del Árbol: ");
+        System.out.println(arbolNumeros.alturaArbol(arbolNumeros.getRoot()));
+        System.out.println("Calculo peso del Árbol: ");
+        System.out.println(arbolNumeros.pesoArbol(arbolNumeros.getRoot()));
+
+        public static void runPersonTree(){
+            BinaryTree<Person> personTree = new BinaryTree<>();
+            personTree.insert(new Person("Alice", 30));
+            personTree.insert(new Person("Bob", 25));
+            personTree.insert(new Person("Diego", 35));
+            personTree.insert(new Person("Rafael", 35));
+            personTree.insert(new Person("Ana", 35));
+
+            personTree.inOrder(); // Imprime las personas ordenadas por edad
+            System.out.println();
+            System.out.println();
+            personTree.preOrder(); // Imprime las personas en pre-orden
+
+        }   
     }
 }
