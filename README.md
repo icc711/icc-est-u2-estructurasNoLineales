@@ -1,18 +1,31 @@
-## Getting Started
+# Práctica: [Título de la Práctica]
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Datos del Estudiante
+- **Nombre:** [Nataly jiménez Salazar]
+- **Curso:** [Tu curso]
+- **Fecha:** [Fecha de entrega]
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 1. [Título de la sección] o [Practica]
+![Descripción de la captura](assets/02-captura-ejemplo.png)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+**Fecha:** 2026-06-16
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+**Descripción:** [Explicar qué muestra esta captura o que desarrollo en clases]
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+## 2. icc-est-u4-complejidad
+![Descripción de la captura](assets/02-captura-ejemplo-2.png)
+**Fecha:** 2026-06-17
+**Descripción:** Cree el poryecto y subimos a GITHUB
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 3. icc-est-u4-complejidad
+![Aplicación desplegada](assets/02-captura-demo.png)
+**Fecha:** 15/03/26
+**Descripción:** Ejemplos de bucles listados
+
+---
