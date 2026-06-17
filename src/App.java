@@ -34,10 +34,10 @@ public class App {
         arbolNumeros.preOrder();
         System.out.println("\nPos-Order: ");
         arbolNumeros.posOrder();
-        System.out.println("In-Order");
+        System.out.println("\nIn-Order");
         arbolNumeros.inOrder();
-        System.out.println("Niveles o Anchura: ");
-        System.out.println("Calculo altura del Árbol: ");
+        System.out.println("\nNiveles o Anchura: ");
+        System.out.println("\\nCalculo altura del Árbol: ");
         
     }
 }
