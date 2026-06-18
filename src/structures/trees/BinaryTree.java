@@ -1,4 +1,7 @@
 package structures.trees;
+import java.util.LinkedList;
+import java.util.Queue;
+
 import structures.node.Node;
 
 public class BinaryTree<T extends Comparable<T>> {
@@ -40,7 +43,6 @@ public class BinaryTree<T extends Comparable<T>> {
         if (actual == null) {
             return nodeInsertar;
         }
-
         // validar si es mayor o menor y decidir si lo inserto a la der o izq
         // PARA COMPARAR OBJETOS DE TIPO GENERICO, NECESITO QUE T IMPLEMENTE LA INTERFAZ COMPARABLE
         if (actual.getValue().compareTo(nodeInsertar.getValue()) > 0) {
@@ -89,23 +91,24 @@ public class BinaryTree<T extends Comparable<T>> {
 
     }
 
-    /*public void nivelesIterativo(){
+    public void nivelesIterativo(){
+        
         if(root == null){ 
             return;
+        }    
         Queue<Node<T>> cola = new LinkedList<>();
         cola.add(root);
 
         while(!cola.isEmpty()){
-            actual = cola.poll();
+            Node<T> actual = cola.poll();
             if(actual != null){
-                System.out.print(getRoot().getValue() + "");
+                System.out.print(actual.getValue() + " ");
                 cola.offer(actual.getLeft());
                 cola.offer(actual.getRight());
             }
         }
-        }
 
-    }*/
+    }
     
     public int alturaArbol(Node<T> actual){
         if(actual == null){

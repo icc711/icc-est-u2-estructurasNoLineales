@@ -1,31 +1,43 @@
-# Práctica: [Título de la Práctica]
+# Práctica: [Estructuras No Lineales - Árboles(Pre-Order, In-Order, Pos-Order)]
 
 ## Datos del Estudiante
 - **Nombre:** [Nataly jiménez Salazar]
-- **Curso:** [Tu curso]
-- **Fecha:** [Fecha de entrega]
+- **Curso:** [Grupo - 6 - Computación]
+- **Fecha:** [2026 - 06 - 17]
 
 ---
 
-## 1. [Título de la sección] o [Practica]
-![Descripción de la captura](assets/02-captura-ejemplo.png)
-
+## 1. [Estructuras No Lineales: Pre-Order, In-Order, Pos-Order y Cálculo Altura del árbol]
 **Fecha:** 2026-06-16
 
-**Descripción:** [Explicar qué muestra esta captura o que desarrollo en clases]
+**Descripción:** [Métodos de recorrido, arboles binarios: pre order, in order, pos order y calculo de la altura del árbol]
 
+***Bloque de Código: Pre-Order***
+![Descripción de la captura](assets/01-bloque-codigo-preOrder.PNG)
+
+***Bloque de Código: IN-Order***
+![Descripción de la captura](assets/01-bloque-codigo-inOrder.PNG)
+
+***Bloque de Código: POS-Order***
+![Descripción de la captura](assets/01-bloque-codigo-posOrder.PNG)
+
+***Bloque de Código: Recorrido por Niveles o Anchura***
+![Descripción de la captura](assets/01-bloque-codigo-niveles-anchura.PNG)
+
+***Bloque de Código: Cálculo Altura del Árbol***
+![Descripción de la captura](assets/01-bloque-codigo-alturaArbol.PNG)
 ---
 
-## 2. icc-est-u4-complejidad
-![Descripción de la captura](assets/02-captura-ejemplo-2.png)
+## 2. [Cálculo Peso del árbol]
+
 **Fecha:** 2026-06-17
-**Descripción:** Cree el poryecto y subimos a GITHUB
 
+**Descripción:** [Cálculo del Peso del Árbol Binario, Clase BinaryTree en la carpeta Tree, Creación de la carpeta models que incluye la clase Person, método runPersonTree en App]
+
+***Bloque de Código: Cálculo Peso del Árbol***
+![Descripción de la captura](assets/02-bloque-codigo-pesoArbol.PNG)
+
+***Bloque de Código: CompareTo***
+![Descripción de la captura](assets/02-bloque-codigo-compareTo.PNG)
 ---
 
-## 3. icc-est-u4-complejidad
-![Aplicación desplegada](assets/02-captura-demo.png)
-**Fecha:** 15/03/26
-**Descripción:** Ejemplos de bucles listados
-
----

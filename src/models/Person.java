@@ -35,9 +35,14 @@ public class Person implements Comparable<Person> {
         // y un valor positivo si this es mayor que otra
         // ordenamos por edad, pero podemos ordenar por otro cualquier atributo
         int compAge = Integer.compare(this.age, otra.age);
-        if (compAge != 0) {  // si al comparar las edades son distintas de cero
-            return compAge; // entonces las edades son diferentes, continuamos con el codigo y ordenamos por edad
+        if (compAge != 0) {  
+            // si al comparar las edades son distintas de cero
+            return compAge; 
+            // significa que las edades son diferentes, 
+            // continuamos con el codigo y ordenamos por edad
         }
-        return this.name.compareTo(otra.getName()); // Si las edades son iguales, ordenamos por nombre
+        return this.name.compareTo(otra.getName()); 
+        // Si las edades son iguales = 0,
+        // se ordenará por nombre
     }
 }

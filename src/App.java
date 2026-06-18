@@ -8,22 +8,10 @@ public class App {
     }
 
     private static void runIntTree() {
-        IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
-
-        // Node<Integer> node3 = new Node<>(30);
-        // Node<Integer> node4 = new Node<>(40);
-        // Node<Integer> node5 = new Node<>(50);
-
-        // Node<Integer> root = arbolNumeros.getRoot();
-
-        // root.setLeft(node2);
-        // root.setRight(node3);
-
-        // node2.setLeft(node4);
-        // node4.setRight(node5);
-
-        //// ERROR GENERA CLICLOS
-        // node5.setLeft(root);
+        IntTree arbolNumeros = new IntTree(); 
+        // CLASE ARBOL
+        // No insertar manualmente los recorridos 
+        // porque genera ciclos
 
         arbolNumeros.insert(10);
         arbolNumeros.insert(5);
@@ -38,26 +26,31 @@ public class App {
         arbolNumeros.posOrder();
         System.out.println("\nIn-Order");
         arbolNumeros.inOrder();
-        System.out.println("\nNiveles o Anchura: ");
-        // arbolNumeros.nivelesIterativo();
+        System.out.println("\nRecorrido por Niveles o Anchura: ");
+        arbolNumeros.nivelesIterativo();
         System.out.println("\nCalculo altura del Árbol: ");
         System.out.println(arbolNumeros.alturaArbol(arbolNumeros.getRoot()));
         System.out.println("Calculo peso del Árbol: ");
         System.out.println(arbolNumeros.pesoArbol(arbolNumeros.getRoot()));
 
-        public static void runPersonTree(){
-            BinaryTree<Person> personTree = new BinaryTree<>();
-            personTree.insert(new Person("Alice", 30));
-            personTree.insert(new Person("Bob", 25));
-            personTree.insert(new Person("Diego", 35));
-            personTree.insert(new Person("Rafael", 35));
-            personTree.insert(new Person("Ana", 35));
+          
+    }
 
-            personTree.inOrder(); // Imprime las personas ordenadas por edad
-            System.out.println();
-            System.out.println();
-            personTree.preOrder(); // Imprime las personas en pre-orden
+    public static void runPersonTree(){
+        BinaryTree<Person> personTree = new BinaryTree<>();
+        personTree.insert(new Person("Alice", 30));
+        personTree.insert(new Person("Bob", 25));
+        personTree.insert(new Person("Diego", 35));
+        personTree.insert(new Person("Rafael", 35));
+        personTree.insert(new Person("Ana", 35));
 
-        }   
+        personTree.inOrder(); 
+        // Imprime las personas ordenadas por edad
+        // con IN-Order
+        System.out.println();
+        System.out.println();
+        personTree.preOrder(); 
+        // Imprime las personas en pre-orden
+
     }
 }

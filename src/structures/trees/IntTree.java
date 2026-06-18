@@ -1,6 +1,8 @@
 package structures.trees;
 
 import structures.node.Node;
+import java.util.Queue;
+import java.util.LinkedList;
 
 // Clase que representa un árbol binario de enteros
 public class IntTree {
@@ -92,23 +94,24 @@ public class IntTree {
 
     }
 
-    /*public void nivelesIterativo(){
+    public void nivelesIterativo(){
+        
         if(root == null){ 
             return;
+        }    
         Queue<Node<Integer>> cola = new LinkedList<>();
         cola.add(root);
 
         while(!cola.isEmpty()){
-            actual = cola.poll();
+            Node<Integer> actual = cola.poll();
             if(actual != null){
-                System.out.print(getRoot().getValue() + "");
+                System.out.print(actual.getValue() + " ");
                 cola.offer(actual.getLeft());
                 cola.offer(actual.getRight());
             }
         }
-        }
 
-    }*/
+    }
     
     public int alturaArbol(Node<Integer> actual){
         if(actual == null){
