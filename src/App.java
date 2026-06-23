@@ -1,6 +1,7 @@
 import structures.trees.IntTree;
 import models.Person;
 import structures.trees.BinaryTree;
+import structures.trees.Ejercicio1;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -51,6 +52,13 @@ public class App {
         System.out.println();
         personTree.preOrder(); 
         // Imprime las personas en pre-orden
-
     }
+
+    public void runEjercicios(){
+        Ejercicio1 ejercicio1 = new Ejercicio1();
+        int[] numeros = new int[] {5, 3, 7, 2, 4, 6, 8};
+        ejercicio1.insert(numeros); 
+    }
+
 }
+
