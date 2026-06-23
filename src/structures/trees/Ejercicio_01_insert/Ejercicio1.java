@@ -14,14 +14,13 @@ public class Ejercicio1 {
 
         BinaryTree<Integer> tree = new BinaryTree<>();
         for (int numero : numeros){
-
-                tree.insert(numero);
+            tree.insert(numero);
         }
     }
 
     public void printTree(Node<Integer> root){
         System.out.println("Imprimiendo el árbol: ");
-        printTreeRecursivo(root, nivel: 0);
+        printTreeRecursivo(root, 0);
     }
 
     public void printTreeRecursivo(Node <Integer> actual, int nivel){
@@ -31,7 +30,7 @@ public class Ejercicio1 {
         printTreeRecursivo(actual.getRight(), nivel +1);
         // for, i obtiene la posicion 0, i < al nivel, i va aumentando
         for (int i = 0; i < nivel; i++){
-            // 
+            // espacios hechos por el tab
             System.out.println("\t");
         }
         System.out.println(actual.getValue());
