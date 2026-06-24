@@ -1,18 +1,56 @@
-import structures.trees.IntTree;
-import structures.trees.Ejercicio_01_insert.Ejercicio1;
-import models.Person;
-import structures.trees.BinaryTree;
+// import structures.trees.IntTree;
+// import models.Person;
+// import structures.trees.BinaryTree;
+
+import java.util.Set;
+
+import collections.set.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
+        
     }
 
-    private static void runIntTree() {
-        IntTree arbolNumeros = new IntTree(); 
-        // CLASE ARBOL
-        // No insertar manualmente los recorridos 
-        // porque genera ciclos
+    public static void runSets(){
+        collections.set.Sets sets = new Sets();
+        System.out.println("HashSet: ");
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Tamaño: " + hashSet.size());
+        System.out.println(hashSet.contains("F"));
+
+        
+        System.out.println();
+        Set<String> lhSet = sets.construirLinkedHashSet();
+        System.out.println(lhSet);
+        System.out.println("Tamaño: " + lhSet.size());
+        System.out.println(lhSet.contains("B"));
+
+        // Implementacion método TreeSet
+        System.out.println("TreeSet: ");
+        Set <String> treeSet = sets.construirTreeSet();
+        System.out.println(treeSet);
+        System.out.println(treeSet.size());
+    }
+    
+
+    /* private static void runIntTree() {
+        IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
+
+        // Node<Integer> node3 = new Node<>(30);
+        // Node<Integer> node4 = new Node<>(40);
+        // Node<Integer> node5 = new Node<>(50);
+
+        // Node<Integer> root = arbolNumeros.getRoot();
+
+        // root.setLeft(node2);
+        // root.setRight(node3);
+
+        // node2.setLeft(node4);
+        // node4.setRight(node5);
+
+        //// ERROR GENERA CLICLOS
+        // node5.setLeft(root);
 
         arbolNumeros.insert(10);
         arbolNumeros.insert(5);
@@ -27,39 +65,26 @@ public class App {
         arbolNumeros.posOrder();
         System.out.println("\nIn-Order");
         arbolNumeros.inOrder();
-        System.out.println("\nRecorrido por Niveles o Anchura: ");
-        arbolNumeros.nivelesIterativo();
+        System.out.println("\nNiveles o Anchura: ");
+        // arbolNumeros.nivelesIterativo();
         System.out.println("\nCalculo altura del Árbol: ");
         System.out.println(arbolNumeros.alturaArbol(arbolNumeros.getRoot()));
         System.out.println("Calculo peso del Árbol: ");
         System.out.println(arbolNumeros.pesoArbol(arbolNumeros.getRoot()));
 
-          
-    }
+        public static void runPersonTree(){
+            BinaryTree<Person> personTree = new BinaryTree<>();
+            personTree.insert(new Person("Alice", 30));
+            personTree.insert(new Person("Bob", 25));
+            personTree.insert(new Person("Diego", 35));
+            personTree.insert(new Person("Rafael", 35));
+            personTree.insert(new Person("Ana", 35));
 
-    public static void runPersonTree(){
-        BinaryTree<Person> personTree = new BinaryTree<>();
-        personTree.insert(new Person("Alice", 30));
-        personTree.insert(new Person("Bob", 25));
-        personTree.insert(new Person("Diego", 35));
-        personTree.insert(new Person("Rafael", 35));
-        personTree.insert(new Person("Ana", 35));
+            personTree.inOrder(); // Imprime las personas ordenadas por edad
+            System.out.println();
+            System.out.println();
+            personTree.preOrder(); // Imprime las personas en pre-orden
 
-        personTree.inOrder(); 
-        // Imprime las personas ordenadas por edad
-        // con IN-Order
-        System.out.println();
-        System.out.println();
-        personTree.preOrder(); 
-        // Imprime las personas en pre-orden
-    }
-
-    public void runEjercicios(){
-        Ejercicio1 ejercicio1 = new Ejercicio1();
-        int[] numeros = new int[] {5, 3, 7, 2, 4, 6, 8};
-        ejercicio1.insert(numeros); 
-        System.out.println();
-    }
-
+        }   
+    }*/
 }
-

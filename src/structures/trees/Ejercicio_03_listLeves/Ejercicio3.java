@@ -1,13 +1,13 @@
 package structures.trees.Ejercicio_03_listLeves;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import structures.node.Node;
+import structures.node.Node;*/
 
 public class Ejercicio3 { // Tip
-    public List<List<Node> > listLevels(Node<T> root){ 
+    /*public List<List<Node> > listLevels(Node<T> root){ 
         // define el metodo que retorna una lista de listas (matriz?)
         List<List<Node<Integer>> > resultado = new ArrayList<>(); 
         // instancia una nueva lista
@@ -21,7 +21,7 @@ public class Ejercicio3 { // Tip
             int size = cola.size();
 
         }
-    }
+    }*/
 }
 
 
