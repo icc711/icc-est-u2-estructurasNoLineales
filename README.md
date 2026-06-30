@@ -37,7 +37,7 @@
 
 ![Descripción de la captura](assets/02-bloque-codigo-pesoArbol.PNG)
 ---
-***Bloque de Código: CompareTo***
+***Bloque de Código: método CompareTo***
 ![Descripción de la captura](assets/02-bloque-codigo-compareTo.PNG)
 ---
 
