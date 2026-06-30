@@ -5,10 +5,18 @@
 import java.util.Set;
 
 import collections.set.*;
+import collections.set.maps.Maps;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        runMaps();
         
+    }
+
+    public static void runMaps(){
+        Maps maps = new Maps();
+        maps.construirHashMap();
+
     }
 
     public static void runSets(){

@@ -1,12 +1,9 @@
 package models;
 
-public class Contacto {
+public class Contacto implements Comparable<Contacto> {
     private String nombre;
     private String apellido;
     private String telefono;
-
-    public class Contacto implements Comparable<Contacto>{
-    }
     
     public Contacto(String nombre, String apellido, String telefono) {
         this.nombre = nombre;
