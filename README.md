@@ -33,10 +33,10 @@
 **Fecha:** 2026-06-17
 
 **Descripción:** [Cálculo del Peso del Árbol Binario, Clase BinaryTree en la carpeta Tree, Creación de la carpeta models que incluye la clase Person, método runPersonTree en App]
-
 ***Bloque de Código: Cálculo Peso del Árbol***
-![Descripción de la captura](assets/02-bloque-codigo-pesoArbol.PNG)
 
+![Descripción de la captura](assets/02-bloque-codigo-pesoArbol.PNG)
+---
 ***Bloque de Código: CompareTo***
 ![Descripción de la captura](assets/02-bloque-codigo-compareTo.PNG)
 ---

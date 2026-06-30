@@ -1,11 +1,26 @@
 import structures.trees.IntTree;
-import structures.trees.Ejercicio_01_insert.Ejercicio1;
+import structures.trees.Ejercicio_03_listLeves.ListLevels;
+import structures.trees.Ejercicio_04_depth.Depth;
+import structures.trees.Ejercicio_01_insert.InsertBSTTest;
+import structures.trees.Ejercicio_02_invert.InvertBinaryTree;
+
+import java.util.List;
+import structures.node.*;
 import models.Person;
 import structures.trees.BinaryTree;
 
 public class App {
+    Node<Integer> root;
+    // root será el atributo que se 
+    // puede usar en toda esta clase 
     public static void main(String[] args) throws Exception {
         runIntTree();
+        App app = new App();
+        app.runEjercicio1();
+        app.runEjercicio2();
+        app.runEjercicio3();
+        app.runEjercicio4();
+      
     }
 
     private static void runIntTree() {
@@ -54,11 +69,66 @@ public class App {
         // Imprime las personas en pre-orden
     }
 
-    public void runEjercicios(){
-        Ejercicio1 ejercicio1 = new Ejercicio1();
+    public void imprimirNiveles(List<List<Node<Integer>>> niveles) {
+        for (List<Node<Integer>> nivel : niveles) {
+            String linea = "";
+            for (int i = 0; i < nivel.size(); i++) {
+                linea = linea + nivel.get(i).getValue();
+                if (i < nivel.size() - 1) {
+                    linea = linea + " -> ";
+                }
+            }
+            System.out.println(linea);
+        }
+    }
+
+    public void runEjercicio1(){
+        InsertBSTTest ejercicio1 = new InsertBSTTest();
         int[] numeros = new int[] {5, 3, 7, 2, 4, 6, 8};
+        System.out.println("Input: ");
         ejercicio1.insert(numeros); 
+        
+    }
+
+    public void runEjercicio2(){
+        root = new Node<>(9);
+        root.setLeft(new Node<>(7));
+        root.setRight(new Node<>(6));
+        root.getLeft().setLeft(new Node<>(4));
+        root.getLeft().setRight(new Node<>(3));
+        root.getRight().setRight(new Node<>(2));
+
+        InvertBinaryTree ejercicio2 = new InvertBinaryTree();
+        root = ejercicio2.invert(root);
+
         System.out.println();
+
+    }
+
+    public void runEjercicio3(){
+        root = new Node<>(9);
+        root.setLeft(new Node<>(7));
+        root.setRight(new Node<>(6));
+        root.getLeft().setLeft(new Node<>(4));
+        root.getLeft().setRight(new Node<>(3));
+        root.getRight().setRight(new Node<>(2));
+
+        ListLevels<Integer> ejercicio3 = new ListLevels<>(); 
+        List<List<Node<Integer>>> niveles = ejercicio3.listLevels(root);
+        imprimirNiveles(niveles);
+            
+    }
+
+    public void runEjercicio4(){
+        Depth ejercicio4 = new Depth();
+        // creo una nueva instancia de depth
+        int profundidad = ejercicio4.maxDepth(root);
+        // llamo al método maxDepth, pasandole la raíz
+        // que tendrá como resultado un int que se guardará 
+        // en la variable profundidad
+        System.out.println("La profundidad máxima del árbol es: " + profundidad);
+        
+
     }
 
 }
