@@ -8,6 +8,7 @@ import java.util.List;
 import structures.node.*;
 import models.Person;
 import structures.trees.BinaryTree;
+import structures.graphs.Graph;
 
 public class App {
     Node<Integer> root;
@@ -20,6 +21,7 @@ public class App {
         app.runEjercicio2();
         app.runEjercicio3();
         app.runEjercicio4();
+        app.printGraph();
       
     }
 
@@ -127,8 +129,25 @@ public class App {
         // que tendrá como resultado un int que se guardará 
         // en la variable profundidad
         System.out.println("La profundidad máxima del árbol es: " + profundidad);
-        
+    }
 
+    public static void printGraph(){
+        Graph<String> graph = new Graph<>();
+        System.out.println("Imprime recorrido del grafo:");
+        graph.add("A");
+        graph.add("B");
+        graph.add("C");
+        graph.add("D");
+        graph.add("J");
+        
+        graph.addEdgeUni("A", "B");
+        graph.addEdgeUni("C", "A");
+        graph.addEdge("J", "D");
+        graph.addEdge("D", "C");
+        graph.addEdgeUni("B", "D");
+        graph.addEdgeUni("B", "C");
+
+        graph.printGraph();
     }
 
 }
