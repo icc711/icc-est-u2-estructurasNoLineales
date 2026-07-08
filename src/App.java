@@ -9,6 +9,8 @@ import structures.node.*;
 import models.Person;
 import structures.trees.BinaryTree;
 import structures.graphs.Graph;
+import structures.graphs.PathResult;
+import structures.graphs.implementations.DFSPathFinder;
 
 public class App {
     Node<Integer> root;
@@ -23,6 +25,26 @@ public class App {
         app.runEjercicio4();
         app.printGraph();
       
+    }
+
+    public static void runGraph2(){
+        Graph<String> graph = new Graph<>();
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
+        graph.addEdge("B", "D");
+        graph.addEdge("C", "J");
+        graph.addEdge("C", "J");
+        graph.addEdgeUni("D", "E");
+        graph.addEdge("E","F");
+        graph.addEdgeUni("K","J");
+
+        DFSPathFinder<String> dfsPathFinder = new DFSPathFinder<String>();
+        PathResult<String> result = dfsPathFinder.find(graph, "A", "F");
+        PathResult<String> result2 = dfsPathFinder.find(graph, "A", "J");
+        PathResult<String> result3 = dfsPathFinder.find(graph, "A", "K");
+
+        
+
     }
 
     private static void runIntTree() {
@@ -131,7 +153,7 @@ public class App {
         System.out.println("La profundidad máxima del árbol es: " + profundidad);
     }
 
-    public static void printGraph(){
+    public void printGraph(){
         Graph<String> graph = new Graph<>();
         System.out.println("Imprime recorrido del grafo:");
         graph.add("A");
@@ -149,6 +171,5 @@ public class App {
 
         graph.printGraph();
     }
-
 }
 

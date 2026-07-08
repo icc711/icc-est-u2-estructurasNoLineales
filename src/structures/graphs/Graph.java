@@ -39,6 +39,7 @@ public class Graph<T> {
     }
 
     public void printGraph(){
+        // entryset() devuelve la clave y el valor
         for(Map.Entry<Node<T>, Set<Node<T>>> entry: graph.entrySet()){
             System.out.print(entry.getKey() + " -> ");
             for (Node<T> conexion : entry.getValue()) {
@@ -48,5 +49,9 @@ public class Graph<T> {
         }
     }
 
-    
+    public Set<Node<T>> getVecinos(T current){
+        return graph.getOrDefault(
+            new Node<T>(current), 
+            new HashSet<Node<T>>()); 
+    }
 }
