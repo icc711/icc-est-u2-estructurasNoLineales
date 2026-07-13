@@ -42,8 +42,9 @@ public class Maps {
         }
         return map;
     }
+    
     public Map<String, Integer> coLinkedHashMap(){
-        Map<String, Integer> lMap = new LinkedHashMap();
+        Map<String, Integer> lMap = new LinkedHashMap<>();
         lMap.put("A", 2);
         lMap.put("B", 3);
         lMap.put("A", 5);
@@ -55,6 +56,7 @@ public class Maps {
         lMap.put("I", 5);
         System.out.println(lMap);
         System.out.println(lMap.entrySet());
+        
         return lMap;
     }
 
@@ -71,9 +73,8 @@ public class Maps {
         lMap.put("I", 5);
         System.out.println(lMap);
         System.out.println(lMap.entrySet());
+        
         return lMap;
-
-
     }
     
 }

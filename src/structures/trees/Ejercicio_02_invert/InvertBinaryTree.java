@@ -14,8 +14,6 @@ public class InvertBinaryTree {
         return root;
     }
 
-
-
     private void invertRecursively(Node <Integer> root){
         // Caso base: si la raiz es null, retorna nada
         if(root == null){

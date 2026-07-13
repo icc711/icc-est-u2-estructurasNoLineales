@@ -44,10 +44,3 @@ public class InsertBSTTest {
         printTreeRecursivo(actual.getLeft(), nivel +1);
     }
 }
-        // crear un arbol BTS - instaciar BinaryTree de tipo integer
-        // insertar los numeros en el arbol
-        // imprimir el arbol [5, 3, 7, 2, 4, 6, 8]
-        // imprimir al reves
-        // pre order(5, 3, 2, 4, 7, 6, 8)
-        // in order(2, 4, 3, 6, 8, 7, 5)
-        // slash t para imprimir los tabs (espacios)

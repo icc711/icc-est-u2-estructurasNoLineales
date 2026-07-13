@@ -41,3 +41,8 @@
 ![Descripción de la captura](assets/02-bloque-codigo-compareTo.PNG)
 ---
 
+## [Diccionarios]:
+**fecha:** 2026-06-29
+
+**Descripción:** [Se realizo ejercicios con maps, set ]
+

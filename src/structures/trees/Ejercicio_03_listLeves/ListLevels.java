@@ -32,8 +32,17 @@ public class ListLevels<T> {
         }
         return result;
     }
+    
+    public void imprimirNiveles(List<List<Node<T>>> niveles, boolean conFlechas) {
+        for (List<Node<T>> nivel : niveles) {
+            String linea = "";
+            for (int i = 0; i < nivel.size(); i++) {
+                linea += nivel.get(i).getValue() + (i < nivel.size() - 1 ? (conFlechas ? " -> " : "   ") : "");
+            }
+            System.out.println(linea);
+        }
+    }
 }
-// ejercicio 3: Dado un árbol binario, devuelve una lista de listas que contiene los nodos en cada nivel del árbol.
 
 
 
