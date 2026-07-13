@@ -12,6 +12,9 @@ import models.Person;
 import structures.trees.BinaryTree;
 import collections.set.Sets;
 import collections.set.maps.Maps;
+import structures.graphs.Graph;
+import structures.graphs.PathResult;
+import structures.graphs.implementations.DFSPathFinder;
 
 public class App {
     Node<Integer> root;
@@ -24,6 +27,8 @@ public class App {
         app.runEjercicio2();
         app.runEjercicio3();
         app.runEjercicio4();
+        app.printGraph();
+        app.runGraph2();
       
     }
 
@@ -55,6 +60,54 @@ public class App {
         System.out.println(treeSet.size());
     }
     
+
+    public static void runGraph2(){
+        Graph<String> graph = new Graph<>();
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
+        graph.addEdge("B", "D");
+        graph.addEdge("C", "J");
+        graph.addEdge("C", "J");
+        graph.addEdgeUni("D", "E");
+        graph.addEdge("E","F");
+        graph.addEdgeUni("K","J");
+
+        DFSPathFinder<String> dfsPathFinder = new DFSPathFinder<String>();
+        PathResult<String> result = dfsPathFinder.find(graph, "A", "F");
+        PathResult<String> result2 = dfsPathFinder.find(graph, "A", "J");
+        PathResult<String> result3 = dfsPathFinder.find(graph, "A", "K");
+
+        PathResult<String> resultPR = dfsPathFinder.find(graph, "A", "F");
+        String inicio = "A";
+        String fin = "F";
+        System.out.println("PathResult " + inicio + "-" + fin);
+        if (resultPR.getPath().isEmpty()) {
+            System.out.println("No se encontro un camino entre los nodos");
+        } else {
+            System.out.println(resultPR);
+        }
+
+        // A - J
+        resultPR = dfsPathFinder.find(graph, "A", "J");
+        inicio = "A";
+        fin = "J";
+        System.out.println("PathResult " + inicio + "-" + fin);
+        if (resultPR.getPath().isEmpty()) {
+            System.out.println("No se encontro un camino entre los nodos");
+        } else {
+            System.out.println(resultPR);
+        }
+
+        resultPR = dfsPathFinder.find(graph, "A", "K");
+        inicio = "A";
+        fin = "K";
+        System.out.println("PathResult " + inicio + "-" + fin);
+        if (resultPR.getPath().isEmpty()) {
+            System.out.println("No se encontro un camino entre los nodos");
+        } else {
+            System.out.println(resultPR);
+        }
+    }
 
     private static void runIntTree() {
         IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
@@ -166,5 +219,24 @@ public class App {
         // que tendrá como resultado un int que se guardará 
         // en la variable profundidad
         System.out.println("La profundidad máxima del árbol es: " + profundidad);
+    }
+
+    public void printGraph(){
+        Graph<String> graph = new Graph<>();
+        System.out.println("Imprime recorrido del grafo:");
+        graph.add("A");
+        graph.add("B");
+        graph.add("C");
+        graph.add("D");
+        graph.add("J");
+        
+        graph.addEdgeUni("A", "B");
+        graph.addEdgeUni("C", "A");
+        graph.addEdge("J", "D");
+        graph.addEdge("D", "C");
+        graph.addEdgeUni("B", "D");
+        graph.addEdgeUni("B", "C");
+
+        graph.printGraph();
     }
 }
